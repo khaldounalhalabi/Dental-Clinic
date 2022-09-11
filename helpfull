@@ -1,0 +1,30 @@
+php artisan migrate:fresh
+php artisan db:seed ExpenseSeeder
+php artisan db:seed IncomeSeeder
+php artisan db:seed PatientSeeder
+php artisan db:seed ReservationSeeder
+php artisan db:seed SummarySeeder
+php artisan db:seed VisitSeeder
+php artisan db:seed WalletSeeder
+php artisan db:seed GivenSeeder
+php artisan db:seed TakenSeeder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Packages :
+composer require fakerphp/faker
+composer require nesbot/carbon

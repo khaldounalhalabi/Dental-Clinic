@@ -1,3 +1,4 @@
+@if(isset($route))
 <div class="card" dir="rtl">
         <div class="card-body">
             <h5 class="card-title">بحث</h5>
@@ -18,3 +19,4 @@
             @include('include.error')
         </div>
     </div>
+@endif

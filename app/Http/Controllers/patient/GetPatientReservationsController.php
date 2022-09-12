@@ -12,7 +12,7 @@ class GetPatientReservationsController extends Controller
     {
         try{
 
-            $data['reservations'] = Reservation::where('patient_id' , $id)->get() ;
+            $data['reservations'] = Reservation::where('patient_id' , $id)->paginate(10) ;
             return view('reservations.reservations')->with($data) ;
         }
         catch(\Exception $e){

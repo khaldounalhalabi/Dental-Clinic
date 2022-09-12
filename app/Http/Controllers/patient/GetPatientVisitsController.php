@@ -12,7 +12,7 @@ class GetPatientVisitsController extends Controller
     {
         try{
 
-            $data['visits'] = Visit::where('patient_id' , $id)->get() ;
+            $data['visits'] = Visit::where('patient_id' , $id)->paginate(10) ;
             return view('visits.visits')->with($data) ;
         }
         catch(\Exception $e){

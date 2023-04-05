@@ -19,8 +19,8 @@ class MainPanelController extends Controller
                 ->paginate(7);
             $data['balance'] =
                 DB::table('wallets')
-                ->orderBy('created_at', 'DESC')
-                ->first();
+                    ->orderBy('created_at', 'DESC')
+                    ->first();
             $data['date'] = Carbon::now('Asia/Damascus')->format('Y-m-d');
             return view('mainpanel')->with($data);
         } catch (\Exception $e) {

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\GetPatientByIdController;
 use App\Http\Controllers\given\AddGivensController;
 use App\Http\Controllers\income\EditIncomeController;
 use App\Http\Controllers\income\IndexIncomeController;
@@ -51,7 +50,7 @@ Route::namespace('App\Http\Controllers\reservation')->group(function () {
     Route::get('/reservations', 'IndexReservationController@index')->name('index.reservation');
     Route::post('/edit_res/{id}', 'EditReservationController@edit')->name('edit.reservation');
     Route::post('delete_res/{id}/{page?}', 'DeleteReservationController@delete')->name('delete.reservation');
-    Route::post('/reservartion/search', 'SearchReservationController@search')->name('search.reservation');
+    Route::post('/reservation/search', 'SearchReservationController@search')->name('search.reservation');
 });
 
 
@@ -114,13 +113,13 @@ Route::namespace('App\Http\Controllers\given')->group(function () {
 
 
 Route::namespace('App\Http\Controllers\taken')->group(function () {
-    Route::get('/takens', 'IndexTakenController@index')->name('index.takens');
-    Route::post('/takens/add', 'AddTakenController@add')->name('add.taken');
+    Route::get('/takes', 'IndexTakenController@index')->name('index.takens');
+    Route::post('/takes/add', 'AddTakenController@add')->name('add.taken');
     Route::post('/taken/edit/{id}', 'EditTakenController@edit')->name('edit.taken');
     route::view('/taken/add_taken_page' , 'takens.AddTaken')->name('add.taken.page') ;
     Route::view('/edit_taken/{id}/{description}/{value}/{date}/{time}', 'takens.EditTaken')->name('edit.taken.page');
     Route::post('/taken/delete/{id}', 'DeleteTakenController@delete')->name('delete.taken');
-    Route::post('/takens/search', 'SearchTakenController@search')->name('search.taken');
+    Route::post('/takes/search', 'SearchTakenController@search')->name('search.taken');
 });
 
 Route::view('/earnings' , 'earnings.earnings')->name('earnings') ;

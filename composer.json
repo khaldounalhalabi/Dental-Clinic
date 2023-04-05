@@ -13,7 +13,16 @@
         "laravel/tinker": "^2.7",
         "nesbot/carbon": "^2.61"
     },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://gitlab.com/cubetaio/backend/utilities.git"
+        }
+    ],
+
     "require-dev": {
+        "cubeta/utilities": "dev-master",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
